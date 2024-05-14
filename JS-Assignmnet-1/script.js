@@ -64,3 +64,54 @@ if (userAlphabet === "A" ||userAlphabet === "E" ||userAlphabet === "I" ||userAlp
 } else {
     console.log(userAlphabet,"is not a vowel");
 }
+
+/* 8. Write a js program to check whether a character is uppercase or
+lowercase alphabet.*/
+
+let alphabet = "H";
+if (alphabet >="A" && alphabet <="Z") {
+    console.log(alphabet,"Upercase");
+} else if (alphabet >="a" && alphabet <="z") {
+    console.log(alphabet,"is Lowercase");
+} else {
+    console.log(alphabet,"is not alphabet");
+}
+
+/* 9. Write a js program to input the week number and print weekday.
+*/
+const weekDays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const weekNumber = parseInt(prompt("Enter the week number (1-7)"),10);
+
+if (weekNumber >=1 && weekNumber <=7) {
+    console.log(`The week is : ${weekDays[weekNumber -1]}`);
+} else {
+    console.log("Invalid week number . Please enter number between 1 and 7");
+}
+
+/* 10. Write a js program to input the month number and print the number of
+days in that month.*/
+const monthName = [
+    "January has 31 days",
+    "February has 28 days",
+    "March has 31 days",
+    "April has 30 days",
+    "May has 31 days",
+    "June has 30 days",
+    "July has 31 days",
+    "August has 31 days",
+    "September has 30 days",
+    "October has 31 days",
+    "November has 30 days",
+    "December has 31 days"
+];
+
+const monthNumber = parseInt( prompt("Enter a month number (1-12)"),10);
+if (monthNumber >=1 && monthNumber <=12) {
+    console.log(`The month is : ${monthName[monthNumber -1]}`);    
+} else {
+    console.log("Invalid month number please enter a number between 1 and 12");
+}
+
+/* 11. Write a js program to count a minimum number of notes in a given
+amount.*/
+
