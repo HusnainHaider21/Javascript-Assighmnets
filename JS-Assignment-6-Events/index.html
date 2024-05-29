@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS-Assignment-6-Events</title>
+    <style>
+        .image1 {
+            width: auto;
+            max-width: 400px;
+        }
+    </style>
 </head>
+
 <body>
+    <h1>Javascript Events</h1>
+    <!-- Chapter No 45 Events:Link -->
+    <a href="Javascript:void(0)" onclick="alert('Hi');">Click me</a>
+
+    <!-- Chapter No 46 Events:Button -->
+    <input type="button" id="btn" value="Click" onclick="greetTheUser()">
+    <img src="/images/Programing-1.jpeg" class="image1" alt="Programing-1" onclick="alert('Hy Everyone')">
+
+    <!-- Chapter No 47 Events:mouse  -->
+    <p id="para" onmousemove="addNewPara()" onmouseout="removePara()">Lorem ipsum dolor sit amet.</p>
+      <!-- using image in Event:mouse -->
+      <img src="/images/Programing-2.jpeg" id="image" onmousemove="addNewImage()" onmouseout="removeImage()" alt="2nd image">
+
     
+    <script>
+        // Chapter No 46 Events:Button//
+        function greetTheUser() {
+            let user = document.getElementById("btn");
+            alert('Hello world');
+        }
+
+
+        // Chapter No 47 Events:mouse//
+        function addNewPara() {
+            let newPara =document.getElementById("para");
+            newPara.textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos corrupti ex error nostrum facilis doloribus perferendis consequatur dolorum amet repellendus.";            
+        }
+        function removePara() {
+            let para =document.getElementById("para");
+            para.textContent="Lorem ipsum dolor sit amet.";            
+        }
+        //using image and event:mosue//
+        function addNewImage() {
+            let image = document.getElementById("image");
+            image.src="images/Programing-1.jpeg";
+       }
+       function removeImage() {
+        let image = document.getElementById("image");
+        image.src="/images/Programing-2.jpeg";
+        
+       }
+    </script>
 </body>
+
 </html>
