@@ -24,10 +24,24 @@
 
     <!-- Chapter No 47 Events:mouse  -->
     <p id="para" onmousemove="addNewPara()" onmouseout="removePara()">Lorem ipsum dolor sit amet.</p>
-      <!-- using image in Event:mouse -->
-      <img src="/images/Programing-2.jpeg" id="image" onmousemove="addNewImage()" onmouseout="removeImage()" alt="2nd image">
+    <!-- using image in Event:mouse -->
+    <img src="/images/Programing-2.jpeg" id="image" onmousemove="addNewImage()" onmouseout="removeImage()"
+        alt="2nd image"><br>
 
-    
+    <!-- Chapter No 48 Events:Fields -->
+    <!-- Using event handler onfocus and onblure -->
+    Email: <br>
+    <input type="text" size="30" id="field" onfocus="makeYellowField()" onblur="makeWhiteField()">
+
+    <!-- Chapter No 49 Reading Field Values -->
+    <!-- Using event handler onSubmit -->
+    <form onSubmit="checkAdress('email')">
+        Email: <br>
+        <input type="text"id="email">
+        <input type="submit" value="submit">
+    </form>
+
+
     <script>
         // Chapter No 46 Events:Button//
         function greetTheUser() {
@@ -38,23 +52,41 @@
 
         // Chapter No 47 Events:mouse//
         function addNewPara() {
-            let newPara =document.getElementById("para");
-            newPara.textContent="Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos corrupti ex error nostrum facilis doloribus perferendis consequatur dolorum amet repellendus.";            
+            let newPara = document.getElementById("para");
+            newPara.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos corrupti ex error nostrum facilis doloribus perferendis consequatur dolorum amet repellendus.";
         }
         function removePara() {
-            let para =document.getElementById("para");
-            para.textContent="Lorem ipsum dolor sit amet.";            
+            let para = document.getElementById("para");
+            para.textContent = "Lorem ipsum dolor sit amet.";
         }
         //using image and event:mosue//
         function addNewImage() {
             let image = document.getElementById("image");
-            image.src="images/Programing-1.jpeg";
-       }
-       function removeImage() {
-        let image = document.getElementById("image");
-        image.src="/images/Programing-2.jpeg";
-        
-       }
+            image.src = "images/Programing-1.jpeg";
+        }
+        function removeImage() {
+            let image = document.getElementById("image");
+            image.src = "/images/Programing-2.jpeg";
+        }
+        //Chapter No 48 Events:Field//
+        function makeYellowField() {
+            let yellow =document.getElementById("field");
+            yellow.style.backgroundColor="Yellow";
+         }
+         function makeWhiteField() {
+            let white=document.getElementById("field");
+            white.style.backgroundColor="white";  
+         }
+
+         //Chapter No 49 Reading Field Values//
+         function checkAdress(fieldId) {
+            let val =document.getElementById(fieldId).value ;
+            if (val ==="") {
+            alert("Email is required.");
+                
+            }
+            
+         }
     </script>
 </body>
 
