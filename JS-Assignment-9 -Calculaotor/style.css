@@ -66,3 +66,9 @@
     cursor: pointer;
     border-radius: 5px;
 }
+
+.scientific-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
