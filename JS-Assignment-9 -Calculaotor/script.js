@@ -9,7 +9,9 @@ document.getElementById("toggle").addEventListener('click',function() {
     this.innerText='>';
   }
     
-})
+});
+
+
 
 
 
@@ -57,11 +59,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
           if (!isNaN(tempInput)) {
               if (value === "sin") {
-                  result = Math.sin(tempInput);
+                  result = Math.sin(tempInput * Math.PI / 180); // Convert to radians
               } else if (value === "cos") {
-                  result = Math.cos(tempInput);
+                  result = Math.cos(tempInput * Math.PI / 180); // Convert to radians
               } else if (value === "tan") {
-                  result = Math.tan(tempInput);
+                  result = Math.tan(tempInput * Math.PI / 180); // Convert to radians
               } else if (value === "log") {
                   result = Math.log10(tempInput);
               } else if (value === "ln") {
@@ -80,15 +82,23 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 
-  toggle.addEventListener('click', function() {
-      if (scientificButtons.style.display === "none") {
-          scientificButtons.style.display = 'flex';
-          this.innerText = "<";
-      } else {
-          scientificButtons.style.display = 'none';
-          this.innerText = '>';
-      }
-  });
+  // toggle.addEventListener('click', function() {
+  //     if (scientificButtons.style.display === "none") {
+  //         scientificButtons.style.display = 'flex';
+  //         this.innerText = "<";
+  //     } else {
+  //         scientificButtons.style.display = 'none';
+  //         this.innerText = '>';
+  //     }
+  // });
 });
+
+
+
+
+
+
+
+
 
 
